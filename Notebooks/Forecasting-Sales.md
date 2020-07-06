@@ -8,6 +8,9 @@ In this notebook, we’ll use this monthly sales dataset to build a
 forcast model to predict the next year’s sales revenue of the Company
 Olist, which operates in Brazil.
 
+Data Loading and Pre-Processing
+-------------------------------
+
 First we load all the necessary packages
 
     library(dplyr)
@@ -125,6 +128,8 @@ only use January 2017 through August 2018 Data.
 
     data <- final[4:23,3]
 
+#### Final Time series form of Sales
+
 We will convert our sales to a Time Series data type.
 
     TSD<-ts(data,start = c(2017,1),end=c(2018,8),frequency = 12)
@@ -146,6 +151,9 @@ Lets plot this data and try to visually analyse the Sales.
 Looking at the Time Series plot we can definitely see a trend in the
 data, but Seasonality is not clear. We will now dive into a number of
 Statistical tests to confirm the nature of the data.
+
+Statistical Testing
+-------------------
 
 First test for trend, Mann-Kendall Trend test (H0: There is no trend;
 H1: There is trend. Thus, if p&lt;0.05, reject H0)
@@ -260,6 +268,9 @@ assigns exponentially decreasing weights and values against historical
 data to decrease the value of the weight for the older data. In other
 words, more recent historical data is assigned more weight in
 forecasting than the older results.
+
+Forecasting
+-----------
 
 Now we fit the model on our data.
 
