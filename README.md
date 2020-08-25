@@ -74,8 +74,9 @@ Once the files are ready, push the repo to Heroku master
     heroku ps:scale web=1
     
 The web application, deployed can be accessed on Heroku via this link. https://olist-freight-app.herokuapp.com/
+
 NOTE:- The Web service on Azure is not currently, up and running. Kindly create a similar web service on Azure and change the API_key and URL files accordingly.
 
 ## Conclusion
-The Olist dataset was analyzed on multiple fronts. Each analysis revealed new information and insights as reported in the notebook.
+The Olist dataset was analyzed on multiple fronts. Each analysis revealed new information and insights as reported in the notebook. For any queries, contact - ansh.raj9@gmail.com and mail.rajtulluri@gmail.com
 
