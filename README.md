@@ -41,5 +41,41 @@ Sentiment analysis is carried out on the reviews offered by customers. The noteb
 #### Freight value prediction
 The freight value is the shipping value associated with each order. The [Freight value prediction](https://github.com/rajtulluri/Olist-business-analysis/blob/master/Notebooks/Freight%20value%20prediction.ipynb) notebook contains detailed model building steps to predict the shipping value for an order, given the distance between seller and customer, the dimensions and weight of the product. Further, the model is also build and deployed on AzureML as a web service. A webapp is created using Dash plotly, to query the model for freight value predictions.
 
+## Web application
+The web application is deployed on Heroku, built in Dash plotly. The application provides a front end to the freight value predictor model built on the AzureML platform. The web application has the following file structure.
 
+    __ app.py
+    __ layout.py
+    __ requirements.txt
+    __ Procfile
+    __ Resources
+      |__ API_key
+      |__ URL 
+      |__ ship.png
+
+The schema below is of the web service built on AzureML.
+
+#### Heroku deployment
+The app.py file contains the server instance and the layout.py file contains the layout to be rendered. 
+The requirements.txt file contains the dependencies of the web application
+    
+    pip freeze > requirements.txt
+    
+The Procfile is used to launch an instance of the app server onto the virtual machine. The contents of the Procfile are
+
+    web: gunicorn app:server
+    
+Once the files are ready, push the repo to Heroku master
+ 
+    heroku create new_app
+    git add .
+    git commit -m "intial push"
+    git push heroku master
+    heroku ps:scale web=1
+    
+The web application, deployed can be accessed on Heroku via this link. https://olist-freight-app.herokuapp.com/
+NOTE:- The Web service on Azure is not currently, up and running. Kindly create a similar web service on Azure and change the API_key and URL files accordingly.
+
+## Conclusion
+The Olist dataset was analyzed on multiple fronts. Each analysis revealed new information and insights as reported in the notebook.
 
