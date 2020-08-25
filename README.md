@@ -18,4 +18,5 @@ Multiple analysis tasks are carried out on the dataset, ranging from descriptive
 The various analysis tasks are listed and explained below:-
 
 ### Joining data
-The given various 
+The original data is used to derive multiple datasets by joins and manipulations. The [Data manipulation and combinig](https://github.com/rajtulluri/Olist-business-analysis/blob/master/Notebooks/Data%20manipulation%20and%20combining.ipynb) jupyter notebook contains the step by step process and explanations.
+
