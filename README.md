@@ -3,6 +3,8 @@
 ## Introduction
 Olist is a Brazilian startup that operates in the e-commerce segment , mainly through the marketplace. It is well spread within the country. This project is a detailed analysis on the comprehensive Olist data. The original Olist dataset has information of 100k orders from 2016 to 2018 made at multiple marketplaces in Brazil. Its features allows viewing an order from multiple dimensions: from order status, price, payment and freight performance to customer location, product attributes and finally reviews written by customers. The schema of the dataset is as below:-
 
+![schema diagram](https://github.com/rajtulluri/Olist-business-analysis/blob/master/Resources/HRhd2Y0.png)
+
 * olist_order_customers_dataset - This dataset has information about the customer and its location. Use it to identify unique customers in the orders dataset and to find the orders delivery location.
 * olist_geolocation_dataset - This dataset has information Brazilian zip codes and its lat/lng coordinates.
 * olist_order_items_dataset - This dataset includes data about the items purchased within each order.
